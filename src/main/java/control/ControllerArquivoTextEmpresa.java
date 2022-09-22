@@ -25,7 +25,7 @@ public class ControllerArquivoTextEmpresa extends ControllerArquivoText {
         }
     }
 
-    public void gravarEmpresa(){
+    public void gravarEmpresas(){
         StringBuilder aux = new StringBuilder();
         aux.append(empresas.get(0));
         setTexto(aux.toString());
