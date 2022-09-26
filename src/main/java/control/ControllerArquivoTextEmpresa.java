@@ -20,14 +20,23 @@ public class ControllerArquivoTextEmpresa extends ControllerArquivoText {
 
         StringTokenizer tokens = new StringTokenizer(aux, ";\n",false);
         while (tokens.hasMoreTokens()){
+            empresa = new Empresa();
             setEmpresa(tokens.nextToken(), tokens.nextToken(), tokens.nextToken());
             carregarEmpresa(empresa);
         }
     }
 
-    public void gravarEmpresas(){
+    /*public void gravarEmpresas(){
         StringBuilder aux = new StringBuilder();
         aux.append(empresas.get(0));
+        setTexto(aux.toString());
+        setArquivo(txt);
+        escreverArquivo(true);
+    }*/
+
+    public void gravarEmpresa(){
+        StringBuilder aux = new StringBuilder();
+        aux.append(empresa.getNome()).append(";").append(empresa.getCnpj()).append(";").append(empresa.getNicho()).append(";");
         setTexto(aux.toString());
         setArquivo(txt);
         escreverArquivo(true);
@@ -57,6 +66,14 @@ public class ControllerArquivoTextEmpresa extends ControllerArquivoText {
 
     public void carregarEmpresa(Empresa empresa){
         empresas.add(empresa);
+    }
+
+    @Override
+    public void apagar(ArrayList lista){
+        setTexto("");
+        setArquivo(txt);
+        escreverArquivo(false);
+        lista = new ArrayList<>();
     }
 
 }

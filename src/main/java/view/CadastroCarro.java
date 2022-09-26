@@ -201,7 +201,9 @@ public class CadastroCarro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        car.apagarCarros();
+
+        //criar metodo para chamada resetar elementos da view v1.2
+        car.apagar(car.getCarros());
         car.setCarros(new ArrayList<>());
         ModelojTextField1.setText("");
         MarcajTextField2.setText("");

@@ -84,10 +84,11 @@ public class ControllerArquivoTextCarro extends ControllerArquivoText {
         this.carros.add(carro);
     }
 
-    public void apagarCarros(){
+    @Override
+    public void apagar(ArrayList lista){
         setTexto("");
         setArquivo(txt);
         escreverArquivo(false);
-        carros = new ArrayList<>();
+        lista = new ArrayList<>();
     }
 }

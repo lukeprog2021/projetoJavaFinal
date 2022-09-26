@@ -1,6 +1,7 @@
 package control;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public abstract class ControllerArquivoText extends ControllerArquivo {
     private String texto = null;
@@ -53,4 +54,6 @@ public abstract class ControllerArquivoText extends ControllerArquivo {
             return false;
         }
     }
+
+    public abstract void apagar(ArrayList lista);
 }
