@@ -79,23 +79,23 @@ public class CadastroCarro extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "ID", "Modelo", "Marca", "Placa"
+                "Modelo", "Marca", "Placa"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -187,9 +187,9 @@ public class CadastroCarro extends javax.swing.JFrame {
         // TODO add your handling code here:
             car.lerCarro();
             for(int i = 0; i<car.getCarros().size();i++){
-                jTable1.setValueAt(car.getCarros().get(i).getModelo(), i,1);
-                jTable1.setValueAt(car.getCarros().get(i).getMarca(),i,2);
-                jTable1.setValueAt(car.getCarros().get(i).getPlaca(), i, 3);
+                jTable1.setValueAt(car.getCarros().get(i).getModelo(), i,0);
+                jTable1.setValueAt(car.getCarros().get(i).getMarca(),i,1);
+                jTable1.setValueAt(car.getCarros().get(i).getPlaca(), i, 2);
             }
 
                 

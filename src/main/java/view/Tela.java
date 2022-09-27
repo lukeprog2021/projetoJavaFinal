@@ -19,7 +19,7 @@ public class Tela {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
 
-        Frame frame = new Frame();
+        System.out.println("TESTE");
 
 
         /* Create and display the form */
